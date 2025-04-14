@@ -1,0 +1,31 @@
+# Physical Design Projects Summary (7nm, 14nm, 45nm)
+
+This repository provides a concise overview of three physical design projects executed at different technology nodes, focusing on the implementation flow from floorplanning to signoff.
+
+## 📁 Projects Overview
+
+### 🧩 Project 1: DMA MAC Block (7nm)
+- **Standard Cell Count**: 1.6M | **Macros**: 40 | **Frequency**: 1 GHz
+- Handled floorplanning with high macro count and congestion challenges.
+- Performed placement, CTS, routing and signoff achieving timing closure and IR drop fixes.
+- Tools: ICC2, PrimeTime, RedHawk
+
+### ⚙️ Project 2: Peripheral Controller Block (45nm)
+- **Standard Cell Count**: 23.6K | **Macros**: 12 | **Frequency**: 125 MHz
+- Full physical design flow including congestion-aware floorplan and port-bound timing fixes.
+- Applied iterative optimization to fix post-placement routing congestion.
+
+### 🔌 Project 3: Interface Block (14nm)
+- **Standard Cell Count**: 380K | **Macros**: 86 | **Frequency**: 1 GHz
+- Complex CTS with skew balancing and timing ECOs.
+- Worked with floorplan team to optimize IO port placements.
+- Fixed IR drop via power grid enhancement and manual cell downsizing.
+
+## 🛠️ Tools & Skills Used
+- **EDA Tools**: ICC2, Innovus, PrimeTime, Tempus, Design Compiler
+- **Scripting**: TCL, Shell, Verilog
+- **PD Expertise**: Floorplanning, Placement, CTS, STA, Routing, IR Drop, ECOs
+- **Nodes**: 7nm, 14nm, 45nm
+
+## 📌 Notes
+These are educational mockups based on real design experience. They contain no proprietary code or NDA-bound content.
