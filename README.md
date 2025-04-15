@@ -36,7 +36,7 @@ Defines the physical layout boundary and initial macro placement to ensure routa
 
 **Challenges:**
 - High macro count led to dense channel areas.
-- Congestion observed near IO ports required multiple iterations of macro movement and pin re-alignment.
+- Congestion observed near IO ports required multiple iterations of macro movement 
 
 ---
 
@@ -50,11 +50,11 @@ Ensures robust power delivery network and mitigates IR drop issues across the la
 
 **Fixation Methods:**
 - Added secondary stripes on higher metals to reduce resistance.
-- Increased via counts and optimized tap cell locations.
+- Increased via counts and optimized tap cell locations
 
 **Challenges:**
 - Initial IR analysis showed hot spots around macro clusters.
-- Solved by adjusting stripe width and spreading local taps.
+
 
 ---
 
@@ -72,7 +72,7 @@ Arranges standard cells in legal locations while minimizing congestion and prese
 
 **Challenges:**
 - Buffer insertion caused overlap violations.
-- Placement reruns were needed to resolve dense logic clumping.
+
 
 ---
 
@@ -87,11 +87,10 @@ Distributes the clock signal with minimal skew and optimal insertion delay.
 
 **Fixation Methods:**
 - Manual push-pull of buffers to align skew across critical endpoints.
-- Adjusted clock sink loading and driven loads by region-wise tuning.
 
 **Challenges:**
 - CTS induced extra congestion around macro corners.
-- Skew control difficult across large distance sinks—solved with intermediate buffers.
+
 
 ---
 
@@ -122,12 +121,11 @@ Analyzes timing constraints and performs incremental changes to close violations
 - Balanced data paths using cell sizing and logic restructuring.
 
 **Fixation Methods:**
-- Applied late-stage hold fixes via inverters and delay cells.
+- Applied late-stage hold fixes via buffer and  delay cells.
 - Used functional ECOs to avoid full re-synthesis.
 
 **Challenges:**
 - Timing margin tight near IO and scan chains.
-- Required iterative STA and logic push/pull to meet tapeout window.
 
 ---
 
@@ -137,15 +135,14 @@ Final stage ensuring DRC/LVS clean and IR-safe layout before tapeout.
 **Tasks Performed:**
 - Ran full DRC and LVS with Calibre.
 - Fixed base-layer and via violations using updated rules.
-- Performed IR/EM checks using RedHawk.
+  
 
 **Fixation Methods:**
-- Fixed metal width violations with dummy fills.
-- Reworked power mesh and downsized switching cells for IR safety.
+- Fixed metal width violations with cells.
+- Reworked power mesh and switching cells for IR safety.
 
 **Challenges:**
 - Baselayer DRCs due to over-buffed areas.
-- Solved by downsizing and rerouting congested nets.
 
 ---
 
