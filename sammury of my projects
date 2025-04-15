@@ -19,7 +19,7 @@ This repository provides a concise overview of three physical design projects ex
 - **Standard Cell Count**: 380K | **Macros**: 86 | **Frequency**: 1 GHz
 - Complex CTS with skew balancing and timing ECOs.
 - Worked with floorplan team to optimize IO port placements.
-- Fixed IR drop via power grid enhancement and manual cell downsizing.
+- Fixed IR drop via power grid enhancement .
 
 ## 🛠️ Tools & Skills Used
 - **EDA Tools**: ICC2, Innovus, PrimeTime, Tempus, Design Compiler
